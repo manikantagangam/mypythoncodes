@@ -1,16 +1,17 @@
-num = int(input("please input number of lines to print: "))
-b   = num+1
-d   =int(b/2)
-# if b%2==0
-for i in range(1,b):
-   if (i<=d):
-       x=(d-i)*" "
-       y=i*"*"
-       z=(i-1)*"*"
-      #  print(x+y+z)
+int_lines = int(input("please input number of lines to print: "))
+
+int_middle_line = (int_lines + 1)/2 if int_lines % 2 == 1 else (int_lines)/2 
+
+for i in range(1, int_lines+1):
+   if (i<=int_middle_line):
+      x=int(int_middle_line-i)*" "
+      y=i*"*"
+      z=(i-1)*"*"     
    else:
-       x=(i-d)*" "
-       y=(b-i)*"*"
-       z=(b-1-i)*"*"
-      
-   print(x+y+z)
+      q = 1 if int_lines % 2 == 0 else 0
+      x=int(i-int_middle_line - q)*" "
+      y=(int_lines+1-i)*"*"
+      z=(int_lines-i)*"*"
+
+   print(f"{x}{y}{z}")
+   
