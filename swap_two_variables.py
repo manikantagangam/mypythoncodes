@@ -1,14 +1,8 @@
-num1 = int(input("please input first number: "))
-num2 = int(input("please input second number: "))
+a = input("please input first variable")
+b = input("please input second variable")
+x = a
 
-if  num1>num2:
-    x=num1-num2
-    num1=num1-x
-    num2=num2+x
-else:
-    x=num2-num1
-    num2=num2-x
-    num1=num1+x
+a = b
+b = x
 
-
-print(num1,num2)
+print(a,b)
