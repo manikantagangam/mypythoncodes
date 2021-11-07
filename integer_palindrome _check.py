@@ -3,12 +3,7 @@ def isPalindrome(x: int) -> bool:
         return False
     else: 
         p = list(str(x))
-        v = ""
-        for i in range(0, len(p)):
-            v = p[i] + v
-        v = int(v)
-        print(v)
-        if x == v:
+        if p[::-1] == p:
             return True
         else:
             return False
